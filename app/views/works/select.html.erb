@@ -1,0 +1,15 @@
+<div class="cent">
+    キャンバスを選んでください。
+</div>
+<div class="cent">
+    <% selImgSand = '砂 浜<br/>' + image_tag("/images/picture/sand.jpg", :class => "sel_img") %>
+    <%= link_to selImgSand.html_safe, '/works/draw?m=1', { :class => "btn btn-default btn-lg mode-sel-btn" } %>
+</div>
+<div class="cent">
+    <% selImgWindow = '曇った窓<br/>' + image_tag("/images/picture/window.jpg", :class => "sel_img") %>
+    <%= link_to selImgWindow.html_safe, '/works/draw?m=2', { :class => "btn btn-default btn-lg mode-sel-btn" } %>
+</div>
+<div class="cent">
+    <% selImgSky = '空 / 雲<br/>' + image_tag("/images/picture/sky.jpg", :class => "sel_img") %>
+    <%= link_to selImgSky.html_safe, '/works/draw?m=3', { :class => "btn btn-default btn-lg mode-sel-btn" } %>
+</div>

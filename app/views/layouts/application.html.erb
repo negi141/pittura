@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#">
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%
+  url  = 'https://pittura.herokuapp.com'
+  title = 'Pittura'
+  description = '指で窓・砂・空などに文字や絵を描いてみよう'
+  keywords = '画像, 指'
+  %>
+  <title><%= title %></title>
+  
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="description" content="<%= description %>" />
+  <meta name="keywords" content="<%= keywords %>" />
+  <meta name="copyright" content="Copyright &amp;copy; <%= title %> All right reserved." />
+
+  <meta property="og:title" content="<%= title %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<%= url %>" />
+  <meta property="og:site_name" content="<%= title %>" />
+  <meta property="og:description" content="<%= description %>" />
+  <meta property="og:locale" content="ja_JP" />
+
+
+  <meta property="og:image" content="<%= url %>/images/site_icon/ogp.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description" content="<%= description %>" />
+
+
+  <link rel="apple-touch-icon" href="/images/site_icon/apple-touch-icon.png" />
+
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= yield :javascript %>
+  
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+  <div class="wrap">
+    <div class="container">
+
+      <div class="title">
+        <a href="/"><%= title %></a>
+      </div>
+
+    <%= yield %>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"C:/root/personal/pittura","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}},"virtualbox":{"/var/www/pittura":{"create":true,"owner":"vagrant","group":"vagrant","guestpath":"/var/www/pittura","hostpath":"C:/root/personal/pittura","disabled":false,"__vagrantfile":true}}}

@@ -1,0 +1,15 @@
+<div class="cent">
+
+    <div id="canvas-content"></div>
+
+    <%= render :partial => @mode %>
+
+    <%= content_for(:javascript) do %>
+        <%= javascript_include_tag "each/Detector.js" %>
+        <%= javascript_include_tag "each/three.min.js" %>
+        <%= javascript_include_tag "each/toast.js" %>
+        <%= javascript_include_tag "each/work.co.global.js" %>
+        <%= javascript_include_tag "each/work.co.load.js" %>
+        <%= javascript_include_tag "each/work." + @mode + ".js" %>
+    <% end %>
+</div>
