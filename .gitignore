@@ -25,3 +25,13 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/.vagrant
+
+# Ignore other unneeded files.
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
