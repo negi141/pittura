@@ -49,6 +49,8 @@ test:
 #
 production:
   <<: *default
-  database: pittura_production
-  username: pittura
-  password: <%= ENV['PITTURA_DATABASE_PASSWORD'] %>
+  host: us-cdbr-iron-east-01.cleardb.net
+  database: heroku_f9097e228432596
+  username: b846e53384661f
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  encoding: utf8mb4
