@@ -1,0 +1,46 @@
+<% provide(:imgUrl, @work.getImageUrlPng) %>
+
+<% if @work.bg_no.blank?
+        hasMotion = false
+    else
+        hasMotion = true
+    end 
+%>
+
+<% if hasMotion %>
+    <%= content_for(:javascript) do %>
+        <%= javascript_include_tag "each/Detector.js" %>
+        <%= javascript_include_tag "each/three.min.js" %>
+        <%= javascript_include_tag "each/toast.js" %>
+        <%= javascript_include_tag "each/work.co.global.js" %>
+        <%= javascript_include_tag "each/work.co.load.js" %>
+        <%= javascript_include_tag "each/work." + @work.mode.to_s + ".pr.js" %>
+    <% end %>
+    <script>
+        var workBgNo = '<%= @work.bg_no %>';
+        var workMode = '<%= @work.mode %>';
+        var workMotion = <%= @work.motion.html_safe %>;
+    </script>
+<% end %>
+
+<div class="cent view-holder">
+    <div class="view-text">
+        <%= image_tag @user.getUserIcon, :class => "tw_icon" %>
+        <%= @user.nickname %>　　<%= @work.getCreatedAt %>
+    </div>
+
+    <% if !@work.comment.blank? %>
+        <div class="view-text"><%= br(@work.comment) %></div>
+    <% end %>
+
+    <% if hasMotion %>
+        <div id="canvas-content"></div>
+        <div>
+            <span id="txtProgressP" style='color:#00a'></span><span id="txtProgressY" style='color:#ddd'></span>
+        </div>
+    <% else %>
+        <div><%= image_tag(@work.getImageUrlPng, :class => 'rad') %></div>
+        <div>※モーションデータはありません</div>
+    <% end %>
+    
+</div>
