@@ -1,0 +1,11 @@
+<div class="cent">
+    <div id="thumbs_holder" class="rad">
+    <%
+    @works.each do |work|
+    %>
+    <%= link_to image_tag(work.getImageUrlJpg), work.getPostUrl %>
+    <%
+    end
+    %>
+    </div>
+</div>

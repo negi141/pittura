@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get 'works/select'
   get 'works/draw'
   
-  root 'works#select'
+  root 'works#index'
 
 end

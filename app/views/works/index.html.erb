@@ -1,0 +1,21 @@
+<% provide(:isTop, "true") %>
+
+<p>指で窓・砂・空などに文字や絵を描いてみよう</p>
+
+<div id="start_btn_holder">
+<%= link_to icon('hand-up') + ' 描いてみる', '/works/select', { :class => "btn btn-lg btn-default" } %>
+</div>
+
+<div id="thumbs_holder" class="rad">
+    <%
+    @works.each do |work|
+    %>
+    <%= link_to image_tag(work.getImageUrlJpg), work.getPostUrl %>
+    <%
+    end
+    %>
+    <br/>
+    <%= link_to 'すべて見る', '/works/list' %>
+</div>
+
+<%= javascript_include_tag "each/Detector.js" %>
