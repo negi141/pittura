@@ -8,3 +8,12 @@ var getElementPosition = function (elem){
 }
 
 var toast = new Toast();
+
+var drawProgress = function($p, $y, per){
+    var max = 30;
+    var pNum = Math.round(per * max);
+    var p = Array(pNum+1).join("■");
+    var y = Array(max-pNum+1).join("■");
+    $p.text(p);
+    $y.text(y);
+}
