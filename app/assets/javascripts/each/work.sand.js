@@ -350,15 +350,15 @@ $(function() {
     
     $("#draw-pen-btn").click(function(){
         selectMyDrawStyle("pen");
-        drawAction.addPen('ds', "pen-");
+        //drawAction.addPen('ds', "pen-");
     });
     $("#draw-pen-n-btn").click(function(){
         selectMyDrawStyle("pen-n");
-        drawAction.addPen('ds', "pen");
+        //drawAction.addPen('ds', "pen");
     });
     $("#draw-eraser-btn").click(function(){
         selectMyDrawStyle("eraser");
-        drawAction.addPen('ds', "eraser");
+        //drawAction.addPen('ds', "eraser");
     });
     $("#draw-clear-btn").click(function(){
         $("#message-content").text("波で消します");
